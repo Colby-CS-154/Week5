@@ -9,6 +9,8 @@ otherwise tell them invalid number
 
 """
 
+user_prompt: str = "\n> User: "
+
 
 def validate_int_input(user_response: str, user_input_message: str) -> int:
     while not user_response.isdigit():
@@ -23,36 +25,40 @@ print(
 )
 
 
-user_input: str = input("> User: ")
+user_input: str = input(user_prompt)
 
-user_input = validate_int_input(user_input, "\n> User: ")
+user_input = validate_int_input(user_input, f"{user_prompt} ")
 
 if user_input == "1":
-    first_number: str = input("Enter the first number\n> User: ")
-    first_number = validate_int_input(first_number, "\n> User: ")
+    first_number: str = input(f"Enter the first number{user_prompt} ")
+    first_number = validate_int_input(first_number, f"{user_prompt}")
 
-    second_number: str = input("Enter the second number\n> User: ")
+    second_number: str = input(f"Enter the second number{user_prompt} ")
     second_number = validate_int_input(
-        second_number, "Enter the second number\n> User: "
+        second_number, f"Enter the second number{user_prompt} "
     )
 
 elif user_input == "2":
-    first_number: str = input("Enter the first number")
-    first_number = validate_int_input(first_number, "Enter the first number\n> User: ")
+    first_number: str = input(f"Enter the first number{user_prompt}")
+    first_number = validate_int_input(
+        first_number, f"Enter the first number{user_prompt} "
+    )
 
-    second_number: str = input("Enter the second number")
+    second_number: str = input(f"Enter the second number{user_prompt}")
     second_number = validate_int_input(
-        second_number, "Enter the second number\n> User: "
+        second_number, f"Enter the second number{user_prompt} "
     )
 
 
 elif user_input == "3":
-    first_number: str = input("Enter the first number")
-    first_number = validate_int_input(first_number, "Enter the first number\n> User: ")
+    first_number: str = input(f"Enter the first number{user_prompt}")
+    first_number = validate_int_input(
+        first_number, f"Enter the first number{user_prompt} "
+    )
 
-    second_number: str = input("Enter the second number")
+    second_number: str = input(f"Enter the second number{user_prompt}")
     second_number = validate_int_input(
-        second_number, "Enter the second number\n> User: "
+        second_number, f"Enter the second number{user_prompt} "
     )
 
 else:
