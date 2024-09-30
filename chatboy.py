@@ -11,6 +11,11 @@ otherwise tell them invalid number
 
 user_prompt: str = "\n> User: "
 
+# EXERCISE: Write the following functions and use them in the code:
+# 1. A function called `add` that takes in two parameters - both integers. It should return the sum of the two parameters
+# 2. A function called `subtract` that takes in two parameters - both integers. It should return the difference of the two parameters.
+# 3. A function called `multiply` that takes in two parameters - both integers. It should return the product of the two parameters.
+
 
 def validate_int_input(user_response: str, user_input_message: str) -> str:
     while not user_response.isdigit():
@@ -35,6 +40,7 @@ while (user_input != "1") and (user_input != "2") and (user_input != "3"):
         f"What would you like to do today?\n1. Add two numbers.\n2. Subtract two numbers\n3. Multiple two numbers{user_prompt}"
     )
 
+
 if user_input == "1":
     first_number: str = input(f"Enter the first number{user_prompt} ")
     first_number = validate_int_input(first_number, f"{user_prompt}")
@@ -43,12 +49,14 @@ if user_input == "1":
     second_number = validate_int_input(
         second_number, f"Enter the second number{user_prompt} "
     )
+    # Call the add function here and print the result for the user
 
 elif user_input == "2":
     first_number: str = input(f"Enter the first number{user_prompt}")
     first_number = validate_int_input(
         first_number, f"Enter the first number{user_prompt} "
     )
+    # Call the subtract function here and print the result for the user
 
     second_number: str = input(f"Enter the second number{user_prompt}")
     second_number = validate_int_input(
@@ -65,3 +73,4 @@ elif user_input == "3":
     second_number = validate_int_input(
         second_number, f"Enter the second number{user_prompt} "
     )
+    # Call the multiply function here and print the result for the user
