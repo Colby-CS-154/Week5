@@ -12,3 +12,10 @@ otherwise tell them invalid number
 print(
     "Hello. What would you like to do today?\n1. Add two numbers.\n2. Subtract two numbers\n3. Multiple two numbers"
 )
+
+
+user_input: str = input("> User: ")
+
+while not user_input.isdigit():
+    print(f"{user_input} is not a number")
+    user_input: str = input("> User: ")
